@@ -10,6 +10,8 @@ provider:
 functions:
   hello:
     handler: handler.hello
+    environment: 
+      SAMPLE_API_KEY: ${param:SAMPLE_API_KEY}
     events:
       - httpApi:
           path: /
